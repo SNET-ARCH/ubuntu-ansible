@@ -1,63 +1,13 @@
 apt_repos:
-  -   'http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com'         #'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
+  - deb http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
+  - deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse   
+#  -   'http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com'         #'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
 #  - 'ppa:git-core/ppa'
 
 #apt_keys:
 #  - '41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE'  # Mercurial
 
 apt_packages:
-  - ack-grep
-  - apt-transport-https
-  - aria2
-  - arp-scan
-  - at
-  - autoconf
-  - axel
-  - bzr
-  - bzr-builder
-  - cabal-debian
-  - cabal-install
-  - cmatrix
-  - colordiff
-  - cowsay
-  - curl
-  - dict
-  - dict-gcide
-  - dictd
-  - exuberant-ctags
-  - ffmpeg
-  - figlet
-  - git
-  - htop
-  - httpcode
-  - iftop
-  - inotify-tools
-  - jq
-  - lame
-  - libblas3
-  - liblapack3
-  - lolcat
-  - mesa-utils
-  - most
-  - nfs-kernel-server
-  - nmap
-  - nodejs
-  - npm
-  - parallel
-  - pass
-  - ppa-purge
-  - python-dev
-  - python-setuptools
-  - python-software-properties
-  - python-sqlparse
-  - shellcheck
-  - smartmontools
-  - sqlformat
-  - subversion
-  - tig
-  - traceroute
-  - tree
-  - unrar
   - vim
   - virtualenvwrapper
   - vorbis-tools

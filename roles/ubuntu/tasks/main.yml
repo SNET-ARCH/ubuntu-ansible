@@ -26,12 +26,12 @@
     update_cache: yes
   with_items: "{{ apt_packages }}"
 
-- name: Setup node symbolic link
-  become: yes
-  file:
-    src: /usr/bin/nodejs
-    dest: /usr/bin/node
-    state: link
+  #- name: Setup node symbolic link
+  #  become: yes
+  #  file:
+  #    src: /usr/bin/nodejs
+  #    dest: /usr/bin/node
+  #    state: link
 
 - name: Create htop config folder
   file:
@@ -39,30 +39,30 @@
     mode: 0700
     path: ~/.config/htop
 
-- name: Setup Configuration Files
-  file:
-    dest: "{{ item.dest }}"
-    force: yes
-    state: link
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}"
-  with_items:
-    - {filename: tigrc, dest: ~/.tigrc }
-    - {filename: nanorc, dest: ~/.nanorc }
-    - {filename: htoprc, dest: ~/.config/htop/htoprc }
-    - {filename: xprofile, dest: ~/.xprofile}
-    - {filename: ansible.cfg, dest: ~/.ansible.cfg}
+    #- name: Setup Configuration Files
+    #  file:
+    #    dest: "{{ item.dest }}"
+    #    force: yes
+    #    state: link
+    #    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}"
+    #  with_items:
+    #    - {filename: tigrc, dest: ~/.tigrc }
+    #    - {filename: nanorc, dest: ~/.nanorc }
+    #    - {filename: htoprc, dest: ~/.config/htop/htoprc }
+    #    - {filename: xprofile, dest: ~/.xprofile}
+    #    - {filename: ansible.cfg, dest: ~/.ansible.cfg}
 
-- name: Setup gitconfig
-  template:
-    dest: ~/.gitconfig
-    src: gitconfig.j2
+      #- name: Setup gitconfig
+      #  template:
+      #    dest: ~/.gitconfig
+      #    src: gitconfig.j2
 
-- name: Setup gitignore
-  file:
-    dest: ~/.gitignore
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gitignore"
-    force: yes
-    state: link
+      #- name: Setup gitignore
+      #  file:
+      #    dest: ~/.gitignore
+      #    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gitignore"
+      #    force: yes
+      #    state: link
 
 - name: Insults Directory
   become: yes
@@ -78,17 +78,17 @@
     dest: "/etc/sudoers.d/insults"
     mode: "0440"
 
-- name: Update to latest PIP
-  become: yes
-  pip:
-    name: pip
-    state: latest
+    #- name: Update to latest PIP
+    #  become: yes
+    #  pip:
+    #    name: pip
+    #    state: latest
 
-- name: Install Global PIP Requirements
-  become: yes
-  pip:
-    requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements_global.txt"
-    state: latest
+    #- name: Install Global PIP Requirements
+  #  become: yes
+  #  pip:
+  #    requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements_global.txt"
+    #    state: latest
 
 - name: Remove useless items
   file:
