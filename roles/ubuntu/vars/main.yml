@@ -3,7 +3,7 @@ pre_tasks:
       become: yes
       apt:
         cache_valid_time: 1800
-        update_cache: yes
+#        update_cache: yes
 
 
 apt_repos:
