@@ -14,7 +14,7 @@ pre_tasks:
 
 
 apt_repos:
-  - deb http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com/ubuntu/dists/bionic/ bionic multiverse 
+  - deb http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com/ubuntu/ bionic multiverse 
 #  - deb http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com bionic multiverse 
 #  - deb http://10.5.32.204:8081/repo/ubuntu/var/spool/apt-mirror/mirror/archive.ubuntu.com bionic-updates multiverse
 #  - deb http://us.archive.ubuntu.com/ubuntu/ bionic multiverse
