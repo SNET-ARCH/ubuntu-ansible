@@ -4,12 +4,12 @@
     name: aptitude
     state: latest
 
-- name: Add Apt Keys
-  become: yes
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: "{{ item }}"
-  with_items: "{{ apt_keys }}"
+#- name: Add Apt Keys
+#  become: yes
+#  apt_key:
+#    keyserver: keyserver.ubuntu.com
+#    id: "{{ item }}"
+#  with_items: "{{ apt_keys }}"
 
 - name: Add Apt Repos
   become: yes
@@ -124,25 +124,25 @@
     state: directory
     mode: 0700
 
-- name: Global Git Status Script
-  file:
-    state: link
-    force: yes
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/git_status.sh"
-    dest: ~/bin/git_status
+#- name: Global Git Status Script
+#  file:
+#    state: link
+#    force: yes
+#    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/git_status.sh"
+#    dest: ~/bin/git_status
 
-- name: Setup Postgres Cheatsheet
-  become: yes
-  file:
-    state: link
-    dest: "/usr/share/man/man1/psqlcheatsheet.1"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/psqlcheatsheet"
-    force: yes
+#- name: Setup Postgres Cheatsheet
+#  become: yes
+#  file:
+#    state: link
+#    dest: "/usr/share/man/man1/psqlcheatsheet.1"
+#    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/psqlcheatsheet"
+#    force: yes
 
-- include_tasks: gpg.yml
+#- include_tasks: gpg.yml
 
-- include_tasks: zsh.yml
+#- include_tasks: zsh.yml
 
 - include_tasks: vim.yml
 
-- include_tasks: docker.yml
+#- include_tasks: docker.yml
