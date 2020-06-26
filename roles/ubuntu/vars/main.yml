@@ -1,9 +1,16 @@
+
 pre_tasks:
-    - name: Update apt
-      become: yes
-      apt:
-        cache_valid_time: 1800
-        update_cache: yes
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+
+#pre_tasks:
+#    - name: Update apt
+#      become: yes
+#      apt:
+#        cache_valid_time: 1800
+#        update_cache: yes
 
 
 apt_repos:
