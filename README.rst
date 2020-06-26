@@ -13,7 +13,7 @@ After installing a fresh Ubuntu installation all you need to do is install ansib
 
 Once thats done then run one of the playbooks found in this repo.
 
-``ubuntu_role.ymll`` is used for setting up Repo, Package Install and  Ubuntu Gnome environment using Gnome Shell.
+``ubuntu_role.yml`` is used for setting up Repo, Package Install and  Ubuntu Gnome environment using Gnome Shell.
 
 For example, setting up a machine with Ubuntu playbook would be done as follows:
 
