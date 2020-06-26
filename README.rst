@@ -3,7 +3,7 @@ Ubuntu Ansible
 
 |TravisCI|
 
-Configure a Ubuntu machine using my personal preferences and usual tools and applications installed.
+Configure a Ubuntu machine using usual tools and applications installed.
 After installing a fresh Ubuntu installation all you need to do is install ansible:
 
 ::
@@ -13,9 +13,9 @@ After installing a fresh Ubuntu installation all you need to do is install ansib
 
 Once thats done then run one of the playbooks found in this repo.
 
-``setup_gnome.yml`` is used for setting up a Ubuntu Gnome environment using Gnome Shell.
+``ubuntu_role.ymll`` is used for setting up Repo, Package Install and  Ubuntu Gnome environment using Gnome Shell.
 
-For example, setting up a machine with Ubuntu Gnome would be done as follows:
+For example, setting up a machine with Ubuntu playbook would be done as follows:
 
 ::
 
