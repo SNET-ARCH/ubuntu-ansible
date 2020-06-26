@@ -3,19 +3,19 @@
   connection: local
   roles:
     - ubuntu
-    - developer
-    - gnome
-    - gnomeshell
+ #   - developer
+ #   - gnome
+ #   - gnomeshell
 
-  vars_prompt:
-    - name: username
-      prompt: "Enter Git username"
-      private: no
+ # vars_prompt:
+ #   - name: username
+ #     prompt: "Enter Git username"
+ #     private: no
 
-    - name: email
-      prompt: "Enter Git email address"
-      private: no
+ #   - name: email
+ #     prompt: "Enter Git email address"
+ #     private: no
 
-    - name: gpgkey
-      prompt: "Enter your GPG signing key"
-      private: no
+ #   - name: gpgkey
+ #     prompt: "Enter your GPG signing key"
+ #     private: no
