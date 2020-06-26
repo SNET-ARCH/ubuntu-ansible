@@ -19,7 +19,10 @@ For example, setting up a machine with Ubuntu playbook would be done as follows:
 
 ::
 
-    ansible-playbook ubuntu_role.yml   Optional inentory and sudo privileges:ansible-playbook ubuntu_role.yml  -i local.inventory --ask-sudo-pass
+    ansible-playbook ubuntu_role.yml   
+    
+    Optional inentory with sudo privileges:  ansible-playbook ubuntu_role.yml  -i local.inventory --ask-sudo-pass
+    
     ansible-playbook -vvvv ubuntu_role.yml
 
 This will prompt you for your user password, your Git username, your Git email address (this is to set up your git configuration correctly) and finally your gpg key id.
